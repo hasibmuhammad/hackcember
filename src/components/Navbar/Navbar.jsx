@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import Logo from "/hackcember.png";
+import Logo from "/images/hackcember.png";
 
 const Navbar = () => {
   const menus = (
@@ -19,9 +19,11 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="flex items-center justify-between">
-      <img className="w-52" src={Logo} alt="" />
-      <ul className="flex items-center gap-6">{menus}</ul>
+    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+      <Link to={"/"}>
+        <img className="w-52" src={Logo} alt="" />
+      </Link>
+      <ul className="flex flex-col md:flex-row items-center gap-6">{menus}</ul>
     </div>
   );
 };
