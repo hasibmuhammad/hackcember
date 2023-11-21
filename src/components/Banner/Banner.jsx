@@ -19,7 +19,7 @@ const Banner = () => {
             scientific applications.
           </p>
           <div>
-            <button className="bg-main px-5 py-3 rounded-lg font-medium outline-none text-white">
+            <button className="bg-main px-5 py-3 rounded-lg font-medium outline-none text-white hover:bg-black">
               Get Started
             </button>
           </div>

@@ -1,64 +1,62 @@
-{
-  "hackathons": [
-    {
-      "id": 1,
-      "name": "Winter CodeFest",
-      "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585732/hackathons/2_kwropf.jpg",
-      "fees": 20.0,
-      "prize_money": 5000.0,
-      "short_description": "Embrace the winter vibes and code your way to victory in this festive 48-hour coding challenge!",
-      "date": "2023-12-05",
-      "location": "Virtual"
-    },
-    {
-      "id": 2,
-      "name": "Holiday Hackathon Extravaganza",
-      "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585731/hackathons/3_y2w9x6.jpg",
-      "fees": 15.0,
-      "prize_money": 7000.0,
-      "short_description": "Celebrate the holidays with a hackathon like no other. Spread joy through innovative coding projects!",
-      "date": "2023-12-12",
-      "location": "San Francisco, CA"
-    },
-    {
-      "id": 3,
-      "name": "TechFrost Challenge",
-      "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585730/hackathons/5_aex2it.png",
-      "fees": 25.0,
-      "prize_money": 10000.0,
-      "short_description": "Step into the winter wonderland of technology. Solve challenges and warm up with exciting prizes!",
-      "date": "2023-12-18",
-      "location": "New York, NY"
-    },
-    {
-      "id": 4,
-      "name": "CyberSec Blizzard Battle",
-      "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585728/hackathons/4_v0ticp.webp",
-      "fees": 30.0,
-      "prize_money": 12000.0,
-      "short_description": "Face the cybersecurity storm head-on. Defend against virtual blizzards and emerge as the cyber champion!",
-      "date": "2023-12-22",
-      "location": "Virtual"
-    },
-    {
-      "id": 5,
-      "name": "Blockchain Frosty Fusion",
-      "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585729/hackathons/7_tfgrdo.webp",
-      "fees": 20.0,
-      "prize_money": 8000.0,
-      "short_description": "Explore the chilly realms of blockchain. Build cool decentralized applications and shape the future of tech!",
-      "date": "2023-12-28",
-      "location": "London, UK"
-    },
-    {
-      "id": 6,
-      "name": "AI Snowflake Hackfest",
-      "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585945/hackathons/6_rdfneb.webp",
-      "fees": 25.0,
-      "prize_money": 15000.0,
-      "short_description": "Let the AI snowflakes guide your creativity. Develop intelligent solutions and win the grand snowfest prize!",
-      "date": "2023-12-31",
-      "location": "Tokyo, Japan"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "Winter CodeFest",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585732/hackathons/2_kwropf.jpg",
+    "fees": 20.0,
+    "prize_money": 5000.0,
+    "short_description": "Embrace the winter vibes and code your way to victory in this festive 48-hour coding challenge!",
+    "date": "2023-12-05",
+    "location": "Virtual"
+  },
+  {
+    "id": 2,
+    "name": "Holiday Hackathon Extravaganza",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585731/hackathons/3_y2w9x6.jpg",
+    "fees": 15.0,
+    "prize_money": 7000.0,
+    "short_description": "Celebrate the holidays with a hackathon like no other. Spread joy through innovative coding projects!",
+    "date": "2023-12-12",
+    "location": "San Francisco, CA"
+  },
+  {
+    "id": 3,
+    "name": "TechFrost Challenge",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585730/hackathons/5_aex2it.png",
+    "fees": 25.0,
+    "prize_money": 10000.0,
+    "short_description": "Step into the winter wonderland of technology. Solve challenges and warm up with exciting prizes!",
+    "date": "2023-12-18",
+    "location": "New York, NY"
+  },
+  {
+    "id": 4,
+    "name": "CyberSec Blizzard Battle",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585728/hackathons/4_v0ticp.webp",
+    "fees": 30.0,
+    "prize_money": 12000.0,
+    "short_description": "Face the cybersecurity storm head-on. Defend against virtual blizzards and emerge as the cyber champion!",
+    "date": "2023-12-22",
+    "location": "Virtual"
+  },
+  {
+    "id": 5,
+    "name": "Blockchain Frosty Fusion",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585729/hackathons/7_tfgrdo.webp",
+    "fees": 20.0,
+    "prize_money": 8000.0,
+    "short_description": "Explore the chilly realms of blockchain. Build cool decentralized applications and shape the future of tech!",
+    "date": "2023-12-28",
+    "location": "London, UK"
+  },
+  {
+    "id": 6,
+    "name": "AI Snowflake Hackfest",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585945/hackathons/6_rdfneb.webp",
+    "fees": 25.0,
+    "prize_money": 15000.0,
+    "short_description": "Let the AI snowflakes guide your creativity. Develop intelligent solutions and win the grand snowfest prize!",
+    "date": "2023-12-31",
+    "location": "Tokyo, Japan"
+  }
+]
