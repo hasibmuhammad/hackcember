@@ -38,7 +38,7 @@ const HackathonDetail = () => {
           </h1>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto my-4 px-10 lg:px-0">
+      <div className="max-w-7xl mx-auto my-28 px-10 lg:px-0">
         <h1 className="text-4xl font-bold">Hackathon Detail</h1>
         <div className="flex flex-col md:flex-row md:gap-24 mt-10">
           <div>

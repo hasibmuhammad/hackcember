@@ -1,4 +1,4 @@
-import FooterLogo from "../../../public/images/footerlogo.png";
+import FooterLogo from "/images/footerlogo.png";
 const Footer = () => {
   return (
     <footer className="footer footer-center p-10 py-20 bg-black text-primary-content">

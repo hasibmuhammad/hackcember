@@ -6,6 +6,7 @@ import Hackathons from "../pages/Hackathons/Hackathons";
 import Mentors from "../pages/Mentors/Mentors";
 import Login from "../pages/Login/Login";
 import HackathonDetail from "../pages/HackathonDetail/HackathonDetail";
+import Register from "../pages/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
     ],
   },

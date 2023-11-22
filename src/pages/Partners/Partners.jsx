@@ -1,8 +1,8 @@
-import google from "../../../public/images/google.png";
-import amazon from "../../../public/images/amazon.png";
-import meta from "../../../public/images/meta.png";
-import microsoft from "../../../public/images/microsoft.png";
-import netflix from "../../../public/images/netflix.png";
+import google from "/images/google.png";
+import amazon from "/images/amazon.png";
+import meta from "/images/meta.png";
+import microsoft from "/images/microsoft.png";
+import netflix from "/images/netflix.png";
 
 const Partners = () => {
   const partners = (
