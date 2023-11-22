@@ -8,7 +8,13 @@
     "short_description": "Embrace the winter vibes and code your way to victory in this festive 48-hour coding challenge!",
     "long_description": "Join us for the Winter CodeFest, where the coding excitement meets the winter wonderland. This 48-hour hackathon is an opportunity to showcase your coding skills and creativity. Whether you're a seasoned developer or a coding enthusiast, come together virtually to celebrate the spirit of innovation.\n\nParticipants will engage in a variety of coding challenges designed to stimulate problem-solving and collaboration. From algorithmic puzzles to real-world applications, Winter CodeFest offers a diverse range of tasks to test your skills. Network with fellow coders, learn from industry experts, and embrace the collaborative atmosphere of this festive coding extravaganza. Don't miss your chance to code, connect, and compete for the grand prize of $5000!",
     "date": "2023-12-05",
-    "location": "Virtual"
+    "location": "Virtual",
+    "badges": [
+      "Beginner Friendly",
+      "Virtual Event",
+      "Winter Theme",
+      "48-Hour Challenge"
+    ]
   },
   {
     "id": 2,
@@ -19,7 +25,13 @@
     "short_description": "Celebrate the holidays with a hackathon like no other. Spread joy through innovative coding projects!",
     "long_description": "Get ready for a festive coding celebration at the Holiday Hackathon Extravaganza! This event is more than just a hackathon; it's a joyous gathering of tech enthusiasts and professionals. Bring your holiday spirit and innovative ideas to San Francisco, CA, as we code our way into the season of giving.\n\nThe Holiday Hackathon Extravaganza features a diverse set of challenges catering to different skill levels and interests. Whether you're passionate about web development, machine learning, or cybersecurity, there's a challenge for you. Collaborate with like-minded individuals, attend workshops by industry leaders, and showcase your creativity in a supportive and festive environment.\n\nJoin us on December 12, 2023",
     "date": "2023-12-12",
-    "location": "San Francisco, CA"
+    "location": "San Francisco, CA",
+    "badges": [
+      "In-person Event",
+      "Holiday Theme",
+      "Diverse Challenges",
+      "Joyful Coding"
+    ]
   },
   {
     "id": 3,
@@ -30,7 +42,13 @@
     "short_description": "Step into the winter wonderland of technology. Solve challenges and warm up with exciting prizes!",
     "long_description": "Immerse yourself in the TechFrost Challenge, a unique blend of technology and winter magic. Journey to New York, NY, where challenges await and exciting prizes will warm up your coding spirit. Whether you're passionate about software development or hardware innovation, this is the place to be!\n\nTechFrost Challenge is not just a hackathon; it's a technological journey through the winter wonderland. Engage in hands-on coding challenges, interactive workshops, and connect with industry professionals. The event culminates in an awards ceremony where participants have the chance to win a share of the impressive $10,000 prize pool. Mark your calendar for December 18, 2023",
     "date": "2023-12-18",
-    "location": "New York, NY"
+    "location": "New York, NY",
+    "badges": [
+      "Hardware Challenges",
+      "Tech Innovation",
+      "Live Workshops",
+      "High Stakes Prizes"
+    ]
   },
   {
     "id": 4,
@@ -41,7 +59,13 @@
     "short_description": "Face the cybersecurity storm head-on. Defend against virtual blizzards and emerge as the cyber champion!",
     "long_description": "Prepare for the ultimate challenge at the CyberSec Blizzard Battle. This virtual hackathon will test your cybersecurity skills against virtual blizzards of challenges. Defend, innovate, and emerge as the cyber champion to claim your share of the impressive $12,000 prize pool.\n\nParticipants will navigate through realistic cybersecurity scenarios, applying their knowledge to protect against virtual blizzards of cyber threats. Engage in live simulations, network with cybersecurity professionals, and enhance your skills in a dynamic and competitive environment.\n\nSave the date for December 22, 2023",
     "date": "2023-12-22",
-    "location": "Virtual"
+    "location": "Virtual",
+    "badges": [
+      "Cybersecurity",
+      "Virtual Event",
+      "Simulations",
+      "High Stakes Prizes"
+    ]
   },
   {
     "id": 5,
@@ -52,7 +76,13 @@
     "short_description": "Explore the chilly realms of blockchain. Build cool decentralized applications and shape the future of tech!",
     "long_description": "Dive into the fascinating world of blockchain at the Blockchain Frosty Fusion hackathon in London, UK. Unleash your creativity to build decentralized applications that could shape the future of technology. Whether you're a blockchain expert or a curious coder, this event is your chance to make a cool impact.\n\nParticipants will have the opportunity to explore the latest trends in blockchain technology, attend workshops by industry leaders, and collaborate with like-minded individuals. From smart contracts to decentralized finance (DeFi) applications, the challenges at Blockchain Frosty Fusion cater to a wide range of interests.\n\nJoin us on December 28, 2023",
     "date": "2023-12-28",
-    "location": "London, UK"
+    "location": "London, UK",
+    "badges": [
+      "Blockchain",
+      "Innovation",
+      "Workshops",
+      "Decentralized Applications"
+    ]
   },
   {
     "id": 6,
@@ -63,6 +93,12 @@
     "short_description": "Let the AI snowflakes guide your creativity. Develop intelligent solutions and win the grand snowfest prize!",
     "long_description": "Join us in Tokyo, Japan, for the AI Snowflake Hackfest - a unique hackathon where AI innovation meets the beauty of snowflakes. Let the AI snowflakes guide your creativity as you develop intelligent solutions. Compete with fellow AI enthusiasts and stand a chance to win the grand snowfest prize!\n\nThe AI Snowflake Hackfest is not just a competition; it's a celebration of artificial intelligence and its potential to shape the future. Participants will delve into machine learning, natural language processing, and computer vision challenges. Engage in collaborative coding, attend expert-led sessions, and showcase your AI prowess in a global arena.\n\nSave the date for December 31, 2023",
     "date": "2023-12-31",
-    "location": "Tokyo, Japan"
+    "location": "Tokyo, Japan",
+    "badges": [
+      "AI Innovation",
+      "Global Competition",
+      "Machine Learning",
+      "Grand Prize"
+    ]
   }
 ]
