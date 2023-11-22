@@ -1,5 +1,7 @@
 import Banner from "../../components/Banner/Banner";
 import Hackathons from "../Hackathons/Hackathons";
+import Mentors from "../Mentors/Mentors";
+import Partners from "../Partners/Partners";
 
 const Home = () => {
   return (
@@ -8,7 +10,15 @@ const Home = () => {
         <Banner />
       </div>
       <div className="max-w-7xl mx-auto px-10 lg:px-0">
-        <Hackathons />
+        <div className="mt-10">
+          <Hackathons />
+        </div>
+        <div className="my-14">
+          <Mentors />
+        </div>
+        <div className="my-14">
+          <Partners />
+        </div>
       </div>
     </div>
   );

@@ -12,14 +12,17 @@ const Hackathons = () => {
 
   return (
     <>
-      <div className="mt-10">
-        <h1 className="text-4xl font-bold">Upcoming Hackathons</h1>
+      <>
+        <h1 className="text-4xl font-bold text-center mb-4">
+          Upcoming Hackathons
+        </h1>
+        <hr className="max-w-xs mx-auto" />
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-10">
           {hackathons.map((hackathon) => (
             <Hackathon hackathon={hackathon} key={hackathon.id} />
           ))}
         </div>
-      </div>
+      </>
     </>
   );
 };
