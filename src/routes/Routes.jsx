@@ -2,8 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../layouts/Root/Root";
 import NotFound from "../pages/NotFound/NotFound";
 import Home from "../pages/Home/Home";
-import Hackathons from "../pages/Hackathons/Hackathons";
-import Mentors from "../pages/Mentors/Mentors";
 import Login from "../pages/Login/Login";
 import HackathonDetail from "../pages/HackathonDetail/HackathonDetail";
 import Register from "../pages/Register/Register";

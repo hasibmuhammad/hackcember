@@ -1,6 +1,85 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../firebase/firebase.config";
+import { useContext, useEffect, useRef, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
+  const formRef = useRef(null);
+  const navigate = useNavigate();
+
+  const { createUser, updateInfo } = useContext(AuthContext);
+
+  const [error, setError] = useState("");
+
+  // Toast
+  const notify = () => toast.success("Registration Successfull!");
+
+  // Handle Sign up
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const name = form.get("name").trim();
+    const email = form.get("email").trim();
+    const password = form.get("password").trim();
+
+    setError("");
+
+    if (!name.length > 0) {
+      setError("Please provide your name.");
+      return;
+    }
+
+    const emailReg = /[a-z0-9]+@[a-z]+.[a-z]{2,3}/;
+    if (!emailReg.test(email)) {
+      setError("Pleaes Enter a valid email!");
+      return;
+    }
+    if (!password) {
+      setError("Please provide password!");
+      return;
+    }
+    if (!(password.length >= 6)) {
+      setError("Password must be at least 6 characters!");
+      return;
+    }
+
+    if (!/[a-z]/g.test(password)) {
+      setError("Password must includes lowercase character");
+      return;
+    }
+    if (!/[A-Z]/g.test(password)) {
+      setError("Password must includes uppercase character");
+      return;
+    }
+    const specialReg = /(?=.*[!@#$%^&*])/g;
+    if (!specialReg.test(password)) {
+      setError("Password must includes special characters(i.e: !@#$%^&*)");
+      return;
+    }
+
+    createUser(email, password)
+      .then((res) => {
+        if (res.user) {
+          notify();
+          formRef.current.reset();
+
+          updateInfo(res.user, { displayName: name })
+            .then(() => {
+              console.log(res.user.displayName);
+            })
+            .catch((error) => setError(error.message));
+
+          // After showing the alert then navigate to login page
+          setTimeout(() => {
+            navigate("/login");
+          }, 6000);
+        }
+      })
+      .catch((error) => setError(error.message));
+  };
+
   return (
     <div>
       <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
@@ -24,29 +103,46 @@ const Register = () => {
             Create an account
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600 ">
-            Already have an account?{" "}
+            Already have an account?
             <Link
               to={"/login"}
               className="font-semibold text-black transition-all duration-200 hover:underline"
             >
+              {" "}
               Login
             </Link>
           </p>
-          <form action="#" method="POST" className="mt-8">
+          <form ref={formRef} className="mt-8" onSubmit={handleSignUp}>
             <div className="space-y-5">
               <div>
                 <label
                   htmlFor=""
                   className="text-base font-medium text-gray-900"
                 >
-                  {" "}
-                  Email address{" "}
+                  Name
+                </label>
+                <div className="mt-2">
+                  <input
+                    className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                  ></input>
+                </div>
+              </div>
+              <div>
+                <label
+                  htmlFor=""
+                  className="text-base font-medium text-gray-900"
+                >
+                  Email address
                 </label>
                 <div className="mt-2">
                   <input
                     className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                     type="email"
                     placeholder="Email"
+                    name="email"
                   ></input>
                 </div>
               </div>
@@ -56,8 +152,7 @@ const Register = () => {
                     htmlFor=""
                     className="text-base font-medium text-gray-900"
                   >
-                    {" "}
-                    Password{" "}
+                    Password
                   </label>
                 </div>
                 <div className="mt-2">
@@ -65,21 +160,24 @@ const Register = () => {
                     className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                     type="password"
                     placeholder="Password"
+                    name="password"
                   ></input>
                 </div>
               </div>
+              {error && <p className="text-error">{error}</p>}
               <div>
                 <button
-                  type="button"
+                  type="submit"
                   className="inline-flex w-full items-center justify-center rounded-md bg-main px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                 >
-                  Login
+                  Sign Up
                 </button>
               </div>
             </div>
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

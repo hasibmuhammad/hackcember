@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <div>
       <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
-        <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
+        <div className="w-2/3 md:w-2/5 lg:w-1/3">
           <div className="mb-2 flex justify-center">
             <svg
               className="text-main"
@@ -80,15 +80,6 @@ const Login = () => {
             </div>
           </form>
           <div className="mt-3 space-y-3">
-            <button
-              type="button"
-              className="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none"
-            >
-              <span className="mr-2 inline-block">
-                <FaGoogle className="text-main" />
-              </span>
-              Continue with Google
-            </button>
             <button
               type="button"
               className="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none"
