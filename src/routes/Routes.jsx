@@ -18,17 +18,9 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/hackathons",
-        element: <Hackathons />,
-      },
-      {
         path: "/hackathon/:id",
         element: <HackathonDetail />,
         loader: () => fetch("../../data/hackathons.json"),
-      },
-      {
-        path: "/mentors",
-        element: <Mentors />,
       },
       {
         path: "/login",

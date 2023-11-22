@@ -7,12 +7,6 @@ const Navbar = () => {
       <li className="hover:text-main">
         <NavLink to={"/"}>Home</NavLink>
       </li>
-      <li className="hover:text-main">
-        <NavLink to={"/hackathons"}>Hackathons</NavLink>
-      </li>
-      <li className="hover:text-main">
-        <NavLink to={"/mentors"}>Mentors</NavLink>
-      </li>
       <li>
         <NavLink to={"/login"}>Login</NavLink>
       </li>
