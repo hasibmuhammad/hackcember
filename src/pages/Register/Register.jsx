@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import auth from "../../firebase/firebase.config";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -23,6 +23,10 @@ const Register = () => {
     const name = form.get("name").trim();
     const email = form.get("email").trim();
     const password = form.get("password").trim();
+
+    const photourl = form.get("photourl").trim();
+
+    const profileImg = photourl ? photourl : "https://i.imgur.com/dLxxRDy.png";
 
     setError("");
 
@@ -65,9 +69,9 @@ const Register = () => {
           notify();
           formRef.current.reset();
 
-          updateInfo(res.user, { displayName: name })
+          updateInfo(res.user, { displayName: name, photoURL: profileImg })
             .then(() => {
-              console.log(res.user.displayName);
+              console.log(res.user.displayName, res.user.photoURL);
             })
             .catch((error) => setError(error.message));
 
@@ -114,6 +118,22 @@ const Register = () => {
           </p>
           <form ref={formRef} className="mt-8" onSubmit={handleSignUp}>
             <div className="space-y-5">
+              <div>
+                <label
+                  htmlFor=""
+                  className="text-base font-medium text-gray-900"
+                >
+                  Photo URL
+                </label>
+                <div className="mt-2">
+                  <input
+                    className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                    type="url"
+                    placeholder="Photo URL(Optional)"
+                    name="photourl"
+                  ></input>
+                </div>
+              </div>
               <div>
                 <label
                   htmlFor=""

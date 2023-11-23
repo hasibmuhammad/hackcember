@@ -1,7 +1,49 @@
 import { Link } from "react-router-dom";
-import { FaGithub, FaGoogle } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
+import { useContext, useRef, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
+  const formRef = useRef(null);
+  const [error, setError] = useState("");
+  const { signIn } = useContext(AuthContext);
+
+  // Toast
+  const success = (msg) => toast.success(msg);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    setError("");
+
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email").trim();
+    const password = form.get("password").trim();
+
+    if (!email) {
+      setError("You must provide email.");
+      return;
+    }
+    if (!password) {
+      setError("You must provide password");
+      return;
+    }
+
+    signIn(email, password)
+      .then((res) => {
+        if (res.user) {
+          formRef.current.reset();
+          success("Logged in successfully!");
+        }
+      })
+      .catch((error) => {
+        if (error.code === "auth/invalid-login-credentials") {
+          setError("Your email or password doesn't match");
+        }
+      });
+  };
   return (
     <div>
       <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
@@ -33,7 +75,7 @@ const Login = () => {
               Create an account
             </Link>
           </p>
-          <form action="#" method="POST" className="mt-8">
+          <form ref={formRef} onSubmit={handleLogin} className="mt-8">
             <div className="space-y-5">
               <div>
                 <label
@@ -48,6 +90,8 @@ const Login = () => {
                     className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                     type="email"
                     placeholder="Email"
+                    name="email"
+                    required
                   ></input>
                 </div>
               </div>
@@ -66,12 +110,17 @@ const Login = () => {
                     className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                     type="password"
                     placeholder="Password"
+                    name="password"
+                    required
                   ></input>
                 </div>
               </div>
+
+              {error && <p className="text-error">{error}</p>}
+
               <div>
                 <button
-                  type="button"
+                  type="submit"
                   className="inline-flex w-full items-center justify-center rounded-md bg-main px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                 >
                   Login
@@ -92,6 +141,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
