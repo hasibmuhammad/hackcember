@@ -77,8 +77,8 @@ const Register = () => {
 
           // After showing the alert then navigate to login page
           setTimeout(() => {
-            navigate("/login");
-          }, 6000);
+            navigate("/");
+          }, 3000);
         }
       })
       .catch((error) => setError(error.message));

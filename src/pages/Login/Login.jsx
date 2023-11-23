@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub } from "react-icons/fa6";
 import { useContext, useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
@@ -6,9 +6,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const formRef = useRef(null);
   const [error, setError] = useState("");
-  const { signIn } = useContext(AuthContext);
+  const { signIn, signInWithGithub } = useContext(AuthContext);
 
   // Toast
   const success = (msg) => toast.success(msg);
@@ -36,6 +39,10 @@ const Login = () => {
         if (res.user) {
           formRef.current.reset();
           success("Logged in successfully!");
+
+          setTimeout(() => {
+            navigate(location?.state ? location.state : "/");
+          }, 3000);
         }
       })
       .catch((error) => {
@@ -43,6 +50,20 @@ const Login = () => {
           setError("Your email or password doesn't match");
         }
       });
+  };
+  const handleGithubLogin = () => {
+    signInWithGithub()
+      .then((res) => {
+        if (res.user) {
+          formRef.current.reset();
+          success("Logged in successfully!");
+
+          setTimeout(() => {
+            navigate(location?.state ? location.state : "/");
+          }, 3000);
+        }
+      })
+      .catch((error) => setError(error.message));
   };
   return (
     <div>
@@ -130,6 +151,7 @@ const Login = () => {
           </form>
           <div className="mt-3 space-y-3">
             <button
+              onClick={handleGithubLogin}
               type="button"
               className="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none"
             >

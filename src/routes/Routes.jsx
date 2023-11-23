@@ -5,6 +5,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import HackathonDetail from "../pages/HackathonDetail/HackathonDetail";
 import Register from "../pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/hackathon/:id",
-        element: <HackathonDetail />,
+        element: (
+          <PrivateRoute>
+            <HackathonDetail />
+          </PrivateRoute>
+        ),
         loader: () => fetch("../../data/hackathons.json"),
       },
       {

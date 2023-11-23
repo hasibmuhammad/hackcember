@@ -27,7 +27,7 @@ const Navbar = () => {
             </button>
           </li>
           <li className="flex flex-col items-center">
-            <img className="w-12" src={user.photoURL} alt="" />
+            <img className="w-12 rounded-full" src={user.photoURL} alt="" />
             <span className="text-xs font-medium">{user.displayName}</span>
           </li>
         </div>
