@@ -1,8 +1,29 @@
-# React + Vite
+# HackCember
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application is an event management web application where we are working with Hackathons of December. So, the name of this application is HackCember.
 
-Currently, two official plugins are available:
+###### Live Demo:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[HackCember](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
+
+##### Features:
+
+- Hackathon Events Listing
+- Routing without reloading
+- Blogs with single blog view with protected route
+- Detail Hackathon view of individual item with protected route
+- Firebase Authentication
+- Registration with Email and Password
+- Email, Password Login
+- Login with Github
+- Protected or Private Route implemented
+- ContextAPI is used to avoid prop-drilling
+
+##### Tech Stack:
+
+- This is build with ReactJS
+- Tailwind Css
+- React Router Dom
+- AOS for animation
+- Firebase
+- React Toastify
