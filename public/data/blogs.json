@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Unlocking Innovation: A Beginner's Guide to Hackathons",
+    "short_description": "Discover the world of hackathons and how they serve as breeding grounds for innovation.",
+    "long_description": "This blog explores the exciting realm of hackathons, providing insights into their significance, the collaborative spirit they foster, and tips for beginners to make the most out of these coding marathons. Learn how hackathons are transforming ideas into reality and propelling technological innovation forward.",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585732/hackathons/2_kwropf.jpg",
+    "tags": ["hackathons", "innovation", "coding", "collaboration"],
+    "posted_at": "2023-01-15"
+  },
+  {
+    "id": 2,
+    "title": "Mastering the Art of Teamwork: A Hackathon Success Story",
+    "short_description": "Follow the journey of a winning hackathon team and discover the secrets behind their success.",
+    "long_description": "In this blog, we delve into the experiences of a successful hackathon team, exploring the dynamics of effective teamwork, communication strategies, and the innovative solutions that led them to victory. Gain valuable insights into how collaboration and creativity go hand-in-hand in the fast-paced world of hackathons.",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585731/hackathons/3_y2w9x6.jpg",
+    "tags": ["hackathons", "teamwork", "success", "innovation"],
+    "posted_at": "2023-02-05"
+  },
+  {
+    "id": 3,
+    "title": "Hacking for Social Good: Impactful Projects That Make a Difference",
+    "short_description": "Explore how hackathons are driving positive change through projects focused on social impact.",
+    "long_description": "This blog showcases inspiring hackathon projects that address real-world problems and contribute to positive social change. From apps promoting sustainability to solutions for healthcare challenges, discover how hackathons are becoming powerful platforms for developers to use their skills for the greater good.",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585730/hackathons/5_aex2it.png",
+    "tags": ["hackathons", "social good", "impactful projects", "innovation"],
+    "posted_at": "2023-03-20"
+  },
+  {
+    "id": 4,
+    "title": "Navigating the Challenges: Tips for a Successful Hackathon Experience",
+    "short_description": "Learn the ropes of hackathon participation with practical tips to overcome challenges.",
+    "long_description": "Participating in a hackathon can be both thrilling and challenging. In this blog, we provide practical tips for navigating common challenges, from time management and idea generation to dealing with technical issues. Arm yourself with strategies to enhance your hackathon experience and maximize your chances of success.",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585728/hackathons/4_v0ticp.webp",
+    "tags": ["hackathons", "tips", "challenges", "success"],
+    "posted_at": "2023-04-10"
+  },
+  {
+    "id": 5,
+    "title": "Behind the Scenes: Organizing a Successful Hackathon Event",
+    "short_description": "Explore the key elements that contribute to the success of hackathon organizers.",
+    "long_description": "Organizing a hackathon involves meticulous planning and execution. This blog goes behind the scenes to uncover the key elements that contribute to the success of hackathon organizers. From choosing the right themes to managing logistics and engaging participants, learn how to orchestrate a hackathon that leaves a lasting impact.",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585729/hackathons/7_tfgrdo.webp",
+    "tags": ["hackathons", "event organization", "success", "innovation"],
+    "posted_at": "2023-05-22"
+  },
+  {
+    "id": 6,
+    "title": "The Future of Hackathons: Trends and Innovations to Watch",
+    "short_description": "Explore emerging trends and innovations shaping the future landscape of hackathons.",
+    "long_description": "As technology evolves, so do hackathons. This blog explores the future of hackathons, highlighting emerging trends, technological advancements, and innovative formats that are reshaping the landscape. Stay ahead of the curve by discovering the exciting possibilities that lie ahead in the world of hackathons.",
+    "image": "https://res.cloudinary.com/hasibmuhammad/image/upload/v1700585945/hackathons/6_rdfneb.webp",
+    "tags": ["hackathons", "future trends", "innovations", "technology"],
+    "posted_at": "2023-06-15"
+  }
+]

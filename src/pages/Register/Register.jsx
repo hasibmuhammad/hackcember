@@ -70,10 +70,8 @@ const Register = () => {
           formRef.current.reset();
 
           updateInfo(res.user, { displayName: name, photoURL: profileImg })
-            .then(() => {
-              console.log(res.user.displayName, res.user.photoURL);
-            })
-            .catch((error) => setError(error.message));
+            .then()
+            .catch();
 
           // After showing the alert then navigate to login page
           setTimeout(() => {

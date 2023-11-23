@@ -16,6 +16,12 @@ const Navbar = () => {
       <li className="hover:text-main">
         <NavLink to={"/"}>Home</NavLink>
       </li>
+      <li>
+        <NavLink to={"/blogs"}>Blogs</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/faq"}>FAQ</NavLink>
+      </li>
       {user ? (
         <div className="flex flex-col-reverse md:flex-row items-center gap-4">
           <li>
