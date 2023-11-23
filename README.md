@@ -4,7 +4,7 @@ This application is an event management web application where we are working wit
 
 ###### Live Demo:
 
-[HackCember](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
+[HackCember](https://hackcember.web.app/)
 
 ##### Features:
 
