@@ -14,11 +14,12 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log("current user is setting: ", currentUser);
       setUser(currentUser);
+      setLoading(false);
     });
 
     return () => {
@@ -27,14 +28,17 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const signIn = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const signInWithGithub = () => {
+    setLoading(true);
     return signInWithPopup(auth, new GithubAuthProvider());
   };
 
@@ -43,6 +47,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const logOut = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
@@ -53,6 +58,7 @@ const AuthProvider = ({ children }) => {
     signIn,
     logOut,
     signInWithGithub,
+    loading,
   };
 
   return (

@@ -11,7 +11,7 @@ const Login = () => {
 
   const formRef = useRef(null);
   const [error, setError] = useState("");
-  const { signIn, signInWithGithub } = useContext(AuthContext);
+  const { user, signIn, signInWithGithub } = useContext(AuthContext);
 
   // Toast
   const success = (msg) => toast.success(msg);
