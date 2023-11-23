@@ -1,9 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../../providers/AuthProvider";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Register = () => {
   const formRef = useRef(null);
@@ -12,6 +15,10 @@ const Register = () => {
   const { createUser, updateInfo } = useContext(AuthContext);
 
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   // Toast
   const notify = () => toast.success("Registration Successfull!");
@@ -84,7 +91,11 @@ const Register = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24"
+      >
         <div className="w-2/3 md:w-2/5 lg:w-1/3">
           <div className="mb-2 flex justify-center">
             <svg

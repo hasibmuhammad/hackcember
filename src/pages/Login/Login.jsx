@@ -1,9 +1,11 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub } from "react-icons/fa6";
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../../providers/AuthProvider";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -12,6 +14,10 @@ const Login = () => {
   const formRef = useRef(null);
   const [error, setError] = useState("");
   const { user, signIn, signInWithGithub } = useContext(AuthContext);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   // Toast
   const success = (msg) => toast.success(msg);
@@ -67,7 +73,11 @@ const Login = () => {
   };
   return (
     <div>
-      <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+      <div
+        data-aos="fade-right"
+        data-aos-delay="200"
+        className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24"
+      >
         <div className="w-2/3 md:w-2/5 lg:w-1/3">
           <div className="mb-2 flex justify-center">
             <svg

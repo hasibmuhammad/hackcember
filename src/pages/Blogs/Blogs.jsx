@@ -1,12 +1,28 @@
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData, Link, useFetcher } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Blogs = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const blogs = useLoaderData();
   return (
-    <div className="my-14">
-      <h1 className="text-4xl font-bold text-center mb-4">Blogs</h1>
+    <div className="my-32">
+      <h1
+        data-aos="fade-left"
+        data-aos-delay="200"
+        className="text-4xl font-bold text-center mb-4"
+      >
+        Blogs
+      </h1>
       <hr className="max-w-xs mx-auto" />
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 mt-10 px-10 lg:px-0">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 px-10 lg:px-0"
+      >
         {blogs.map((blog) => (
           <div key={blog.id} className="rounded-md border shadow-lg">
             <img

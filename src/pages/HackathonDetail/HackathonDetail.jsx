@@ -8,7 +8,14 @@ import { MdEventNote } from "react-icons/md";
 
 import { useLoaderData, useParams } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const HackathonDetail = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const { id } = useParams();
   const hackathons = useLoaderData();
   const hackathon = hackathons.find((ht) => ht.id === parseInt(id));
@@ -33,12 +40,20 @@ const HackathonDetail = () => {
         <img className="w-full h-full object-cover" src={image} alt={name} />
 
         <div className="absolute flex flex-col items-center transform -translate-y-1/2 left-5 right-5 top-1/2 text-center space-y-4 px-10">
-          <h1 className="text-white text-5xl font-semibold leading-tight">
+          <h1
+            data-aos="fade-in"
+            data-aos-delay="200"
+            className="text-white text-5xl font-semibold leading-tight"
+          >
             {name}
           </h1>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto my-10 px-10 lg:px-0">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        className="max-w-7xl mx-auto my-20 px-10 lg:px-0"
+      >
         <h1 className="text-4xl font-bold">Hackathon Detail</h1>
         <div className="flex flex-col md:flex-row md:gap-24 mt-10">
           <div>

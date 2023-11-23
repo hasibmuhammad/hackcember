@@ -1,9 +1,31 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const Faq = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="mt-14">
-      <h1 className="text-4xl font-bold text-center mb-4">FAQ</h1>
-      <hr className="max-w-xs mx-auto" />
-      <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+    <div className="my-32">
+      <h1
+        data-aos="fade-left"
+        data-aos-delay="200"
+        className="text-4xl font-bold text-center mb-4"
+      >
+        FAQ
+      </h1>
+      <hr
+        data-aos="fade-left"
+        data-aos-delay="200"
+        className="max-w-xs mx-auto"
+      />
+      <div
+        data-aos="fade-left"
+        data-aos-delay="200"
+        className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24"
+      >
         <div className="w-full md:w-3/5">
           <div>
             <div className="collapse collapse-plus bg-base-100">
